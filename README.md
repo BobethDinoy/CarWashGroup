@@ -39,7 +39,7 @@ This initiative facilitates online appointment requests for clients or patients 
     
 | Admin Dashboard | Doctor Dashboard | Patient Dashboard |
 | -------| -------| -------|
-| Email: `admin@edoc.com` | Email: `doctor@edoc.com` |   Email: `patient@edoc.com` | 
+| Email: `admin@cws.com` | Email: `doctor@edoc.com` |   Email: `patient@edoc.com` | 
 | Password: `123` |  Password: `123` |  Password: `123` |
 | ![](https://github.com/hshnudr/edoc-echanneling/blob/main/Screenshots/Screenshot%20(3).png)| ![](https://github.com/hshnudr/edoc-echanneling/blob/main/Screenshots/Screenshot%20(9).png) |    ![](https://github.com/hshnudr/edoc-echanneling/blob/main/Screenshots/Screenshot%20(6).png)  |
 

@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `edoc`
+-- Database: `cws`
 --
 
 -- --------------------------------------------------------
@@ -27,6 +27,51 @@ SET time_zone = "+00:00";
 --
 -- Table structure for table `admin`
 --
+
+
+
+
+-- Add the 'type' column to 'account' table to distinguish between patient (0) and doctor (1)
+ALTER TABLE `account`
+ADD COLUMN `type` INT NOT NULL AFTER `password`;
+
+-- Create 'patient' table
+CREATE TABLE IF NOT EXISTS `patient` (
+    `pid` INT AUTO_INCREMENT PRIMARY KEY,
+    `pemail` VARCHAR(255) NOT NULL,
+    `pname` VARCHAR(255) DEFAULT NULL,
+    `ppassword` VARCHAR(255) DEFAULT NULL,
+    `paddress` VARCHAR(255) DEFAULT NULL,
+    `pnic` VARCHAR(15) DEFAULT NULL,
+    `pdob` DATE DEFAULT NULL,
+    `ptel` VARCHAR(15) DEFAULT NULL,
+    FOREIGN KEY (`pemail`) REFERENCES `account`(`username`)
+);
+
+-- Create 'doctor' table
+CREATE TABLE IF NOT EXISTS `doctor` (
+    `docid` INT AUTO_INCREMENT PRIMARY KEY,
+    `docemail` VARCHAR(255) NOT NULL,
+    `docname` VARCHAR(255) DEFAULT NULL,
+    `docpassword` VARCHAR(255) DEFAULT NULL,
+    `docnic` VARCHAR(15) DEFAULT NULL,
+    `doctel` VARCHAR(15) DEFAULT NULL,
+    `specialties` INT(2) DEFAULT NULL,
+    FOREIGN KEY (`docemail`) REFERENCES `account`(`username`),
+    FOREIGN KEY (`specialties`) REFERENCES `specialties`(`id`)
+);
+
+-- Sample data for 'patient' table
+INSERT INTO `patient` (`pemail`, `pname`, `ppassword`, `paddress`, `pnic`, `pdob`, `ptel`)
+VALUES ('iverson@cws.com', 'Test Patient', '123', 'Sri Lanka', '0000000000', '2000-01-01', '0120000000');
+
+-- Sample data for 'doctor' table
+INSERT INTO `doctor` (`docemail`, `docname`, `docpassword`, `docnic`, `doctel`, `specialties`)
+VALUES ('carwashowner@cws.com', 'Test Doctor', '123', '000000000', '0110000000', 1);
+
+
+
+
 
 DROP TABLE IF EXISTS `admin`;
 CREATE TABLE IF NOT EXISTS `admin` (
@@ -40,7 +85,7 @@ CREATE TABLE IF NOT EXISTS `admin` (
 --
 
 INSERT INTO `admin` (`aemail`, `apassword`) VALUES
-('admin@edoc.com', '123');
+('admin@cws.com', '123');
 
 -- --------------------------------------------------------
 
@@ -91,7 +136,7 @@ CREATE TABLE IF NOT EXISTS `doctor` (
 --
 
 INSERT INTO `doctor` (`docid`, `docemail`, `docname`, `docpassword`, `docnic`, `doctel`, `specialties`) VALUES
-(1, 'doctor@edoc.com', 'Test Doctor', '123', '000000000', '0110000000', 1);
+(1, 'doctor@cws.com', 'Test Doctor', '123', '000000000', '0110000000', 1);
 
 -- --------------------------------------------------------
 
@@ -117,7 +162,7 @@ CREATE TABLE IF NOT EXISTS `patient` (
 --
 
 INSERT INTO `patient` (`pid`, `pemail`, `pname`, `ppassword`, `paddress`, `pnic`, `pdob`, `ptel`) VALUES
-(1, 'patient@edoc.com', 'Test Patient', '123', 'Sri Lanka', '0000000000', '2000-01-01', '0120000000'),
+(1, 'iverson@cws.com', 'Test Patient', '123', 'Sri Lanka', '0000000000', '2000-01-01', '0120000000'),
 (2, 'emhashenudara@gmail.com', 'Hashen Udara', '123', 'Sri Lanka', '0110000000', '2022-06-03', '0700000000');
 
 -- --------------------------------------------------------
@@ -245,10 +290,10 @@ CREATE TABLE IF NOT EXISTS `webuser` (
 --
 
 INSERT INTO `webuser` (`email`, `usertype`) VALUES
-('admin@edoc.com', 'a'),
-('doctor@edoc.com', 'd'),
-('patient@edoc.com', 'p'),
-('emhashenudara@gmail.com', 'p');
+('admin@cws.com', 'a'),
+('carwashownerowner@cws.com', 'd'),
+('vehicleowner@cws.com', 'p'),
+('iverson@gmail.com', 'p');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

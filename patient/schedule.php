@@ -44,7 +44,7 @@
     $stmt->bind_param("s",$useremail);
     $stmt->execute();
     $result = $stmt->get_result();
-    $userfetch=$userrow->fetch_assoc();
+    $userfetch = $result->fetch_assoc();    
     $userid= $userfetch["pid"];
     $username=$userfetch["pname"];
 
@@ -83,28 +83,28 @@
                  </td>
              </tr>
              <tr class="menu-row" >
-                    <td class="menu-btn menu-icon-home " >
+                    <td class="menu-btn menu-icon- " >
                         <a href="index.php" class="non-style-link-menu "><div><p class="menu-text">Home</p></a></div></a>
                     </td>
                 </tr>
                 <tr class="menu-row">
-                    <td class="menu-btn menu-icon-doctor">
-                        <a href="doctors.php" class="non-style-link-menu"><div><p class="menu-text">All Doctors</p></a></div>
+                    <td class="menu-btn menu-icon-">
+                        <a href="doctors.php" class="non-style-link-menu"><div><p class="menu-text">Carwash Stations</p></a></div>
                     </td>
                 </tr>
                 
                 <tr class="menu-row" >
-                    <td class="menu-btn menu-icon-session menu-active menu-icon-session-active">
+                    <td class="menu-btn menu-icon-">
                         <a href="schedule.php" class="non-style-link-menu non-style-link-menu-active"><div><p class="menu-text">Scheduled Sessions</p></div></a>
                     </td>
                 </tr>
                 <tr class="menu-row" >
-                    <td class="menu-btn menu-icon-appoinment">
+                    <td class="menu-btn menu-icon-">
                         <a href="appointment.php" class="non-style-link-menu"><div><p class="menu-text">My Bookings</p></a></div>
                     </td>
                 </tr>
                 <tr class="menu-row" >
-                    <td class="menu-btn menu-icon-settings">
+                    <td class="menu-btn menu-icon-">
                         <a href="settings.php" class="non-style-link-menu"><div><p class="menu-text">Settings</p></a></div>
                     </td>
                 </tr>
@@ -148,7 +148,7 @@
                     <td >
                             <form action="" method="post" class="header-search">
 
-                                        <input type="search" name="search" class="input-text header-searchbar" placeholder="Search Doctor name or Email or Date (YYYY-MM-DD)" list="doctors" value="<?php  echo $insertkey ?>">&nbsp;&nbsp;
+                                        <input type="search" name="search" class="input-text header-searchbar" placeholder="Search Carwash Station or Services" list="doctors" value="<?php  echo $insertkey ?>">&nbsp;&nbsp;
                                         
                                         <?php
                                             echo '<datalist id="doctors">';

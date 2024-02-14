@@ -73,7 +73,7 @@ if($_POST){
             $_SESSION["usertype"]="p";
             $_SESSION["username"]=$fname;
 
-            header('Location: patient/index.php');
+            header('Location: login.php');
             $error='<label for="promter" class="form-label" style="color:rgb(255, 62, 62);text-align:center;"></label>';
         }
         
@@ -98,7 +98,7 @@ if($_POST){
             <tr>
                 <td colspan="2">
                     <p class="header-text">Let's Get Started</p>
-                    <p class="sub-text">It's Okey, Now Create User Account.</p>
+                    <p class="sub-text">Now Create User Account.</p>
                 </td>
             </tr>
             <tr>
@@ -115,7 +115,7 @@ if($_POST){
             </tr>
             <tr>
                 <td class="label-td" colspan="2">
-                    <label for="tele" class="form-label">Mobile Number: </label>
+                    <label for="tele" class="form-label">Phone Number: </label>
                 </td>
             </tr>
             <tr>
@@ -135,7 +135,7 @@ if($_POST){
             </tr>
             <tr>
                 <td class="label-td" colspan="2">
-                    <label for="cpassword" class="form-label">Conform Password: </label>
+                    <label for="cpassword" class="form-label">Confirm Password: </label>
                 </td>
             </tr>
             <tr>
@@ -156,9 +156,12 @@ if($_POST){
                 <td>
                     <input type="reset" value="Reset" class="login-btn btn-primary-soft btn" >
                 </td>
-                <td>
-                    <input type="submit" value="Sign Up" class="login-btn btn-primary btn">
-                </td>
+             
+    <td>
+        <input type="submit" value="Sign Up" class="login-btn btn-primary btn">
+    </td>
+
+
 
             </tr>
             <tr>
