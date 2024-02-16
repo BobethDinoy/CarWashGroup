@@ -79,9 +79,9 @@
                     </table>
                     </td>
                 </tr>
-                <tr class="menu-row" >
-                    <td class="menu-btn menu-icon-" >
-                        <a href="index.php" class="non-style-link-menu "><div><p class="menu-text">Dashboard</p></a></div></a>
+                <tr class="menu-row">
+                    <td class="menu-btn menu-icon-">
+                        <a href="appointment.php" class="non-style-link-menu"><div><p class="menu-text">Dashboard</p></a></div>
                     </td>
                 </tr>
                 <tr class="menu-row">

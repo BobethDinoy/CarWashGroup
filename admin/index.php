@@ -69,28 +69,28 @@
                     </td>
                 </tr>
                 <tr class="menu-row" >
-                    <td class="menu-btn menu-icon-dashbord menu-active menu-icon-dashbord-active" >
+                    <td class="menu-btn menu-icon-" >
                         <a href="index.php" class="non-style-link-menu non-style-link-menu-active"><div><p class="menu-text">Dashboard</p></a></div></a>
                     </td>
                 </tr>
                 <tr class="menu-row">
-                    <td class="menu-btn menu-icon-doctor ">
-                        <a href="doctors.php" class="non-style-link-menu "><div><p class="menu-text">Doctors</p></a></div>
+                    <td class="menu-btn menu-icon- ">
+                        <a href="carwashowner.php" class="non-style-link-menu "><div><p class="menu-text">Carwash Owners</p></a></div>
                     </td>
                 </tr>
                 <tr class="menu-row" >
-                    <td class="menu-btn menu-icon-schedule">
+                    <td class="menu-btn menu-icon-">
                         <a href="schedule.php" class="non-style-link-menu"><div><p class="menu-text">Schedule</p></div></a>
                     </td>
                 </tr>
                 <tr class="menu-row">
-                    <td class="menu-btn menu-icon-appoinment">
+                    <td class="menu-btn menu-icon-">
                         <a href="appointment.php" class="non-style-link-menu"><div><p class="menu-text">Appointment</p></a></div>
                     </td>
                 </tr>
                 <tr class="menu-row" >
-                    <td class="menu-btn menu-icon-patient">
-                        <a href="patient.php" class="non-style-link-menu"><div><p class="menu-text">Patients</p></a></div>
+                    <td class="menu-btn menu-icon-">
+                        <a href="vehicleowner.php" class="non-style-link-menu"><div><p class="menu-text">Vehicle Owners </p></a></div>
                     </td>
                 </tr>
             </table>
@@ -172,10 +172,9 @@
                                                     <?php    echo $doctorrow->num_rows  ?>
                                                 </div><br>
                                                 <div class="h3-dashboard">
-                                                    Doctors &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                    Carwash &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                                 </div>
                                         </div>
-                                                <div class="btn-icon-back dashboard-icons" style="background-image: url('../img/icons/doctors-hover.svg');"></div>
                                     </div>
                                 </td>
                                 <td style="width: 25%;">
@@ -185,10 +184,9 @@
                                                     <?php    echo $patientrow->num_rows  ?>
                                                 </div><br>
                                                 <div class="h3-dashboard">
-                                                    Patients &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                    Vehicle Owners &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                                 </div>
                                         </div>
-                                                <div class="btn-icon-back dashboard-icons" style="background-image: url('../img/icons/patients-hover.svg');"></div>
                                     </div>
                                 </td>
                                 <td style="width: 25%;">
@@ -198,23 +196,21 @@
                                                     <?php    echo $appointmentrow ->num_rows  ?>
                                                 </div><br>
                                                 <div class="h3-dashboard" >
-                                                    NewBooking &nbsp;&nbsp;
+                                                    Booking &nbsp;&nbsp;
                                                 </div>
                                         </div>
-                                                <div class="btn-icon-back dashboard-icons" style="margin-left: 0px;background-image: url('../img/icons/book-hover.svg');"></div>
                                     </div>
                                 </td>
                                 <td style="width: 25%;">
-                                    <div  class="dashboard-items"  style="padding:20px;margin:auto;width:95%;display: flex;padding-top:26px;padding-bottom:26px;">
+                                    <div  class="dashboard-items"  style="padding:20px;margin:auto;width:95%;display: flex; ">
                                         <div>
-                                                <div class="h1-dashboard">
-                                                    <?php    echo $schedulerow ->num_rows  ?>
+                                                <div class="h1-dashboard" >
+                                                    <?php    echo $appointmentrow ->num_rows  ?>
                                                 </div><br>
-                                                <div class="h3-dashboard" style="font-size: 15px">
-                                                    Today Sessions
+                                                <div class="h3-dashboard" >
+                                                    Sessions &nbsp;&nbsp;
                                                 </div>
                                         </div>
-                                                <div class="btn-icon-back dashboard-icons" style="background-image: url('../img/icons/session-iceblue.svg');"></div>
                                     </div>
                                 </td>
                                 
@@ -266,7 +262,7 @@
                                         <tr>    
                                                 <th class="table-headin" style="font-size: 12px;">
                                                         
-                                                    Appointment number
+                                                    Queue number
                                                     
                                                 </th>
                                                 <th class="table-headin">
@@ -275,7 +271,7 @@
                                                 <th class="table-headin">
                                                     
                                                 
-                                                    Doctor
+                                                    Carwash Owners
                                                     
                                                 </th>
                                                 <th class="table-headin">
@@ -372,7 +368,7 @@
                                                 </th>
                                                 
                                                 <th class="table-headin">
-                                                    Doctor
+                                                    Carwash
                                                 </th>
                                                 <th class="table-headin">
                                                     
